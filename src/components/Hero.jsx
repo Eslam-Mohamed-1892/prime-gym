@@ -1,5 +1,5 @@
 import React from 'react'
-import hero from '../images/hero.jpg'
+import hero from '../images/hero/hero.jpg'
 
 export default function Hero() {
     return (
@@ -8,11 +8,12 @@ export default function Hero() {
             style={{ backgroundImage: `url(${hero})` }}
         >
             <div className='w-full h-full bg-black/40 flex flex-col justify-start md:justify-center gap-5 text-white outfitFont px-5 md:px-8 lg:px-12 py-10'>
-            <h1 className='bebasFont text-[36px] md:text-[44px] lg:text-[52px] leading-[0.95]'>BUILD YOUR PRIME</h1>
-            <p className='text-[16px] lg:text-[17px]'>Push your limits.</p>
-            <p className='text-[16px] lg:text-[17px]'>Become stronger.</p>
-            <button className='w-[50%] md:w-[25%] text-[14px] md:text-[15px] bg-[#111111] text-[#D41414] active:text-white cursor-pointer p-1 font-medium rounded-lg'>JOIN NOW</button>
-            </div>
+                <h1 className='bebasFont text-[36px] md:text-[44px] lg:text-[52px] leading-[0.95]'>BUILD YOUR PRIME</h1>
+                <p className='text-[16px] lg:text-[17px]'>Push your limits.</p>
+                <p className='text-[16px] lg:text-[17px]'>Become stronger.</p>
+                <button className='w-fit text-[13px] md:text-[14px] bg-[#111111] text-[#D41414] active:text-white transition-colors duration-200 cursor-pointer px-5 py-2 font-medium rounded-lg'>
+                    JOIN NOW
+                </button>            </div>
         </section>
     )
 }
