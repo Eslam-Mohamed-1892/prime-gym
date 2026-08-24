@@ -1,19 +1,22 @@
 import React from 'react'
 import hero from '../images/hero/hero.jpg'
+import { Link } from 'react-scroll'
 
 export default function Hero() {
     return (
         <section
-            className='w-full h-screen bg-cover bg-position-[60%_center] lg:bg-center bg-no-repeat pt-16 md:pt-18 lg:pt-20'
+            id='home'
+            className='w-full h-screen bg-cover bg-position-[60%_center] lg:bg-center bg-no-repeat'
             style={{ backgroundImage: `url(${hero})` }}
         >
             <div className='w-full h-full bg-black/40 flex flex-col justify-start md:justify-center gap-5 text-white outfitFont px-5 md:px-8 lg:px-12 py-10'>
                 <h1 className='bebasFont text-[36px] md:text-[44px] lg:text-[52px] leading-[0.95]'>BUILD YOUR PRIME</h1>
                 <p className='text-[16px] lg:text-[17px]'>Push your limits.</p>
                 <p className='text-[16px] lg:text-[17px]'>Become stronger.</p>
-                <button className='w-fit text-[13px] md:text-[14px] bg-[#111111] text-[#D41414] active:text-white transition-colors duration-200 cursor-pointer px-5 py-2 font-medium rounded-lg'>
+                <Link to='membership' smooth={true} className='inline-block w-fit text-[13px] md:text-[14px] bg-[#D41414] text-white active:text-black active:bg-white transition-colors duration-200 cursor-pointer px-5 py-2 font-medium rounded-lg'>
                     JOIN NOW
-                </button>            </div>
+                </Link>            
+                </div>
         </section>
     )
 }

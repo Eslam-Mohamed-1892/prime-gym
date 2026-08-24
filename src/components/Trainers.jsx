@@ -4,8 +4,11 @@ import kyrillos from '../images/trainers/kiro.jpeg'
 
 export default function Trainers() {
     return (
-        <section className='w-full bg-[#F5F5F5] px-5 md:px-8 lg:px-12 py-16 md:py-20 lg:py-24'>
-            
+        <section
+            id='trainers'
+            className='w-full bg-[#F5F5F5] px-5 md:px-8 lg:px-12 py-16 md:py-20 lg:py-24'
+        >
+
             <div className='max-w-6xl mx-auto'>
 
                 {/* Section Heading */}
@@ -27,7 +30,7 @@ export default function Trainers() {
                         <img
                             src={islam}
                             alt="Captain Islam"
-                            className='w-full h-[320px] md:h-[330px] lg:h-[420px] object-[50%_48%] lg:object-[50%_45%] object-cover'
+                            className='w-full h-80 md:h-82.5 lg:h-105 object-[50%_48%] lg:object-[50%_45%] object-cover'
                         />
 
                         <div className='p-5 md:p-6 outfitFont'>
@@ -51,7 +54,7 @@ export default function Trainers() {
                         <img
                             src={kyrillos}
                             alt="Captain Kyrillos"
-                            className='w-full h-[320px] md:h-[330px] lg:h-[420px] object-[50%_45%] object-cover'
+                            className='w-full h-80 md:h-82.5 lg:h-105 object-[50%_45%] object-cover'
                         />
 
                         <div className='p-5 md:p-6 outfitFont'>

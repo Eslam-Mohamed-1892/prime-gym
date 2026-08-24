@@ -1,11 +1,15 @@
 import React from 'react'
 import boxing from '../images/programs/boxing.jpg'
 import strength from '../images/programs/strength.jpg'
+import { Link } from 'react-scroll'
 
 export default function Programs() {
     return (
-        <section className='w-full bg-[#111111] px-5 md:px-8 lg:px-12 py-16 md:py-20 lg:py-24'>
-            
+        <section
+            id='programs'
+            className='w-full bg-[#111111] px-5 md:px-8 lg:px-12 py-16 md:py-20 lg:py-24'
+        >
+
             <div className='max-w-6xl mx-auto'>
 
                 {/* Section Heading */}
@@ -27,7 +31,7 @@ export default function Programs() {
                         <img
                             src={strength}
                             alt="Strength Training"
-                            className='w-full h-[280px] md:h-[320px] object-cover'
+                            className='w-full h-70 md:h-80 object-cover'
                         />
 
                         <div className='p-5 md:p-6 outfitFont'>
@@ -40,10 +44,13 @@ export default function Programs() {
                                 body beyond its limits.
                             </p>
 
-                            <button className='mt-5 bg-[#D41414] text-white px-5 py-2 rounded-lg text-sm font-medium cursor-pointer active:bg-white active:text-[#111111] transition-colors duration-200'>
+                            <Link
+                                to='membership'
+                                smooth={true}
+                                className='inline-block mt-5 bg-[#D41414] text-white px-5 py-2 rounded-lg text-sm font-medium cursor-pointer active:bg-white active:text-[#111111] transition-colors duration-200'
+                            >
                                 LEARN MORE
-                            </button>
-                        </div>
+                            </Link>                        </div>
                     </div>
 
                     {/* Boxing */}
@@ -51,7 +58,7 @@ export default function Programs() {
                         <img
                             src={boxing}
                             alt="Boxing Training"
-                            className='w-full h-[280px] md:h-[320px] object-cover'
+                            className='w-full h-70 md:h-80 object-cover'
                         />
 
                         <div className='p-5 md:p-6 outfitFont'>
@@ -64,9 +71,13 @@ export default function Programs() {
                                 and develop speed and discipline.
                             </p>
 
-                            <button className='mt-5 bg-[#D41414] text-white px-5 py-2 rounded-lg text-sm font-medium cursor-pointer active:bg-white active:text-[#111111] transition-colors duration-200'>
+                            <Link
+                                to='membership'
+                                smooth={true}
+                                className='inline-block mt-5 bg-[#D41414] text-white px-5 py-2 rounded-lg text-sm font-medium cursor-pointer active:bg-white active:text-[#111111] transition-colors duration-200'
+                            >
                                 LEARN MORE
-                            </button>
+                            </Link>
                         </div>
                     </div>
 

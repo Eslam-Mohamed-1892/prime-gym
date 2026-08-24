@@ -1,9 +1,13 @@
 import React from 'react'
 import about from '../images/about/about2.jpeg'
+import { Link } from 'react-scroll'
 
 export default function About() {
     return (
-        <section className='w-full bg-[#F5F5F5] px-5 md:px-8 lg:px-12 py-16 md:py-20 lg:py-24'>
+        <section 
+        id='about'
+        className='w-full bg-[#F5F5F5] px-5 md:px-8 lg:px-12 py-16 md:py-20 lg:py-24'
+        >
             
             <div className='max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10 md:gap-12 lg:gap-16'>
 
@@ -12,7 +16,7 @@ export default function About() {
                     <img
                         src={about}
                         alt="Prime Gym"
-                        className='w-full h-[300px] md:h-[400px] lg:h-[450px] object-cover rounded-2xl'
+                        className='w-full h-75 md:h-100 lg:h-112.5 object-cover rounded-2xl'
                     />
                 </div>
 
@@ -39,9 +43,9 @@ export default function About() {
                         reach your goals.
                     </p>
 
-                    <button className='mt-6 bg-[#111111] text-[#D41414] active:text-white transition-colors duration-200 px-6 py-2 rounded-lg text-sm font-medium cursor-pointer'>
+                    <Link to='programs' smooth={true} className='inline-block mt-6 bg-[#111111] text-[#D41414] active:text-white active:bg-[#D41414] transition-colors duration-200 px-6 py-2 rounded-lg text-sm font-medium cursor-pointer'>
                         LEARN MORE
-                    </button>
+                    </Link>
 
                 </div>
 
