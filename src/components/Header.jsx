@@ -20,7 +20,7 @@ export default function Header() {
 
                 {/* Desktop Menu */}
                 <nav className='text-white outfitFont hidden md:flex gap-5 md:text-[16px] font-semibold cursor-pointer'>
-                    <Link to='home' smooth={true} duration={800} offset={-40} activeClass='text-[#D41414]' spy={true}>
+                    <Link to='home' smooth={true} duration={800} offset={-80} activeClass='text-[#D41414]' spy={true}>
                         Home
                     </Link>
 
