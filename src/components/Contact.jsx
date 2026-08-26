@@ -172,6 +172,7 @@ export default function Contact({ language }) {
                                     <br />
 
                                     <a
+                                    dir='ltr'
                                         href={item.link}
                                         target={item.type === 'address' ? '_blank' : undefined}
                                         rel={item.type === 'address' ? 'noopener noreferrer' : undefined}
