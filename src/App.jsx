@@ -8,34 +8,36 @@ import Membership from './components/Membership'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import LanguageButton from './components/LanguageButton'
+import ThemeButton from './components/ThemeButton'
 
 export default function App() {
 
     const [language, setLanguage] = useState('ar')
+    const [theme, setTheme] = useState('dark')
 
     return (
         <div dir={language === 'ar' ? 'rtl' : 'ltr'}>
 
-            <Header
-                language={language}
-                setLanguage={setLanguage}
-            />
+            <Header language={language} theme={theme} />
+            <Hero language={language} theme={theme} />
+            <About language={language} theme={theme} />
+            <Programs language={language} theme={theme} />
+            <Trainers language={language} theme={theme} />
+            <Membership language={language} theme={theme} />
+            <Contact language={language} theme={theme} />
+            <Footer language={language} theme={theme} />
 
-            <Hero language={language} />
-            <About language={language} />
-            <Programs language={language} />
-            <Trainers language={language} />
-            <Membership language={language} />
-            <Contact language={language} />
+            <div className='fixed bottom-5 right-5 z-30 flex flex-col gap-3'>
+                <LanguageButton
+                    language={language}
+                    setLanguage={setLanguage}
+                />
 
-            <Footer
-                language={language}
-                setLanguage={setLanguage}
-            />
-            <LanguageButton
-                language={language}
-                setLanguage={setLanguage}
-            />
+                <ThemeButton
+                    theme={theme}
+                    setTheme={setTheme}
+                />
+            </div>
 
         </div>
     )

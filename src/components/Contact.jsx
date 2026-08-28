@@ -1,6 +1,8 @@
 import React from 'react'
 
-export default function Contact({ language }) {
+export default function Contact({ language, theme }) {
+
+    const isDark = theme === 'dark'
 
     const content = {
         en: {
@@ -124,7 +126,10 @@ export default function Contact({ language }) {
         <section
             id='contact'
             dir='ltr'
-            className='w-full bg-[#F5F5F5] px-5 md:px-8 lg:px-12 py-16 md:py-20 lg:py-24'
+            className={`w-full px-5 md:px-8 lg:px-12 py-16 md:py-20 lg:py-24 border-t border-b border-black ${isDark
+                    ? 'bg-[#111111]'
+                    : 'bg-[#F5F5F5]'
+                }`}
         >
 
             <div className='max-w-6xl mx-auto'>
@@ -139,7 +144,12 @@ export default function Contact({ language }) {
                         {current.label}
                     </span>
 
-                    <h2 className='bebasFont text-[#111111] text-[34px] md:text-[42px] lg:text-[48px] leading-none mt-2'>
+                    <h2
+                        className={`bebasFont text-[34px] md:text-[42px] lg:text-[48px] leading-none mt-2 ${isDark
+                                ? 'text-white'
+                                : 'text-[#111111]'
+                            }`}
+                    >
                         {current.heading}
                     </h2>
 
@@ -153,10 +163,18 @@ export default function Contact({ language }) {
                     {/* Find Us */}
                     <div
                         dir={language === 'ar' ? 'rtl' : 'ltr'}
-                        className='bg-white rounded-2xl p-6 md:p-7 outfitFont'
+                        className={`rounded-2xl p-6 md:p-7 outfitFont ${isDark
+                                ? 'bg-[#1A1A1A]'
+                                : 'bg-white'
+                            }`}
                     >
 
-                        <h3 className='bebasFont text-[#111111] text-[28px] md:text-[32px]'>
+                        <h3
+                            className={`bebasFont text-[28px] md:text-[32px] ${isDark
+                                    ? 'text-white'
+                                    : 'text-[#111111]'
+                                }`}
+                        >
                             {current.findUs}
                         </h3>
 
@@ -172,11 +190,22 @@ export default function Contact({ language }) {
                                     <br />
 
                                     <a
-                                    dir='ltr'
+                                        dir='ltr'
                                         href={item.link}
-                                        target={item.type === 'address' ? '_blank' : undefined}
-                                        rel={item.type === 'address' ? 'noopener noreferrer' : undefined}
-                                        className='text-[#444444] text-[15px] md:text-[16px] leading-7 cursor-pointer active:text-[#D41414] transition-colors duration-200'
+                                        target={
+                                            item.type === 'address'
+                                                ? '_blank'
+                                                : undefined
+                                        }
+                                        rel={
+                                            item.type === 'address'
+                                                ? 'noopener noreferrer'
+                                                : undefined
+                                        }
+                                        className={`text-[15px] md:text-[16px] leading-7 cursor-pointer active:text-[#D41414] transition-colors duration-200 ${isDark
+                                                ? 'text-[#BDBDBD]'
+                                                : 'text-[#444444]'
+                                            }`}
                                     >
                                         {item.value}
                                     </a>
@@ -192,10 +221,18 @@ export default function Contact({ language }) {
                     {/* Opening Hours */}
                     <div
                         dir={language === 'ar' ? 'rtl' : 'ltr'}
-                        className='bg-white rounded-2xl p-6 md:p-7 outfitFont'
+                        className={`rounded-2xl p-6 md:p-7 outfitFont ${isDark
+                                ? 'bg-[#1A1A1A]'
+                                : 'bg-white'
+                            }`}
                     >
 
-                        <h3 className='bebasFont text-[#111111] text-[28px] md:text-[32px]'>
+                        <h3
+                            className={`bebasFont text-[28px] md:text-[32px] ${isDark
+                                    ? 'text-white'
+                                    : 'text-[#111111]'
+                                }`}
+                        >
                             {current.openingHours}
                         </h3>
 
@@ -213,14 +250,22 @@ export default function Contact({ language }) {
                                     {current.gymHours.map((group) => (
                                         <div key={group.title}>
 
-                                            <p className='text-[#111111] font-semibold'>
+                                            <p
+                                                className={`font-semibold ${isDark
+                                                        ? 'text-white'
+                                                        : 'text-[#111111]'
+                                                    }`}
+                                            >
                                                 {group.title}
                                             </p>
 
                                             {group.hours.map((hour) => (
                                                 <p
                                                     key={hour}
-                                                    className='text-[#444444] text-[15px] md:text-[16px]'
+                                                    className={`text-[15px] md:text-[16px] ${isDark
+                                                            ? 'text-[#BDBDBD]'
+                                                            : 'text-[#444444]'
+                                                        }`}
                                                 >
                                                     {hour}
                                                 </p>
@@ -241,11 +286,21 @@ export default function Contact({ language }) {
                                     {current.boxing}
                                 </span>
 
-                                <p className='text-[#111111] font-semibold mt-2'>
+                                <p
+                                    className={`font-semibold mt-2 ${isDark
+                                            ? 'text-white'
+                                            : 'text-[#111111]'
+                                        }`}
+                                >
                                     {current.boxingHours.days}
                                 </p>
 
-                                <p className='text-[#444444] text-[15px] md:text-[16px] mt-1'>
+                                <p
+                                    className={`text-[15px] md:text-[16px] mt-1 ${isDark
+                                            ? 'text-[#BDBDBD]'
+                                            : 'text-[#444444]'
+                                        }`}
+                                >
                                     {current.boxingHours.hours}
                                 </p>
 

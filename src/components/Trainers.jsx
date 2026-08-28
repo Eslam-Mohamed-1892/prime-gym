@@ -2,7 +2,9 @@ import React from 'react'
 import islam from '../images/trainers/eslam.jpeg'
 import kyrillos from '../images/trainers/kiro.jpeg'
 
-export default function Trainers({ language }) {
+export default function Trainers({ language, theme }) {
+
+    const isDark = theme === 'dark'
 
     const content = {
         en: {
@@ -58,7 +60,8 @@ export default function Trainers({ language }) {
     return (
         <section
             id='trainers'
-            className='w-full bg-[#F5F5F5] px-5 md:px-8 lg:px-12 py-16 md:py-20 lg:py-24'
+            className={`w-full px-5 md:px-8 lg:px-12 py-16 md:py-20 lg:py-24 border-b border-t border-black ${isDark ? 'bg-[#111111]' : 'bg-[#F5F5F5]'
+                }`}
         >
 
             <div className='max-w-6xl mx-auto'>
@@ -73,7 +76,10 @@ export default function Trainers({ language }) {
                         {current.label}
                     </span>
 
-                    <h2 className='bebasFont text-[#111111] text-[34px] md:text-[42px] lg:text-[48px] leading-none mt-2'>
+                    <h2
+                        className={`bebasFont text-[34px] md:text-[42px] lg:text-[48px] leading-none mt-2 ${isDark ? 'text-white' : 'text-[#111111]'
+                            }`}
+                    >
                         {current.heading}
                     </h2>
 
@@ -86,7 +92,8 @@ export default function Trainers({ language }) {
                     {trainers.map((trainer) => (
                         <div
                             key={trainer.name}
-                            className='bg-white rounded-2xl overflow-hidden'
+                            className={`rounded-2xl overflow-hidden ${isDark ? 'bg-[#1A1A1A]' : 'bg-white'
+                                }`}
                             dir={language === 'ar' ? 'rtl' : 'ltr'}
                         >
 
@@ -101,7 +108,10 @@ export default function Trainers({ language }) {
                             {/* Content */}
                             <div className='p-5 md:p-6 outfitFont'>
 
-                                <h3 className='bebasFont text-[#111111] text-[28px] md:text-[32px]'>
+                                <h3
+                                    className={`bebasFont text-[28px] md:text-[32px] ${isDark ? 'text-white' : 'text-[#111111]'
+                                        }`}
+                                >
                                     {trainer.name}
                                 </h3>
 
@@ -109,7 +119,10 @@ export default function Trainers({ language }) {
                                     {trainer.specialty[language]}
                                 </span>
 
-                                <p className='text-[#444444] text-[15px] md:text-[16px] leading-7 mt-3'>
+                                <p
+                                    className={`text-[15px] md:text-[16px] leading-7 mt-3 ${isDark ? 'text-[#BDBDBD]' : 'text-[#444444]'
+                                        }`}
+                                >
                                     {trainer.description[language]}
                                 </p>
 
