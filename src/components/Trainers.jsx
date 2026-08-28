@@ -60,7 +60,7 @@ export default function Trainers({ language, theme }) {
     return (
         <section
             id='trainers'
-            className={`w-full px-5 md:px-8 lg:px-12 py-16 md:py-20 lg:py-24 border-b border-t border-black ${isDark ? 'bg-[#111111]' : 'bg-[#F5F5F5]'
+            className={`w-full px-5 md:px-8 lg:px-12 py-16 md:py-20 lg:py-24 border-b border-t border-[#2A2A2A] ${isDark ? 'bg-[#111111]' : 'bg-[#F5F5F5]'
                 }`}
         >
 

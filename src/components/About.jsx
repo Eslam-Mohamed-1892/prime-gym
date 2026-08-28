@@ -46,7 +46,7 @@ export default function About({ language, theme }) {
         <section
             id='about'
             dir='ltr'
-            className={`w-full px-5 md:px-8 lg:px-12 py-16 md:py-20 lg:py-24 ${isDark ? 'bg-[#111111] border-b border-black' : 'bg-[#F5F5F5]'}'
+            className={`w-full px-5 md:px-8 lg:px-12 py-16 md:py-20 lg:py-24 ${isDark ? 'bg-[#111111] border-b border-[#2A2A2A]' : 'bg-[#F5F5F5]'}'
                 }`}
         >
 

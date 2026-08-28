@@ -126,7 +126,7 @@ export default function Contact({ language, theme }) {
         <section
             id='contact'
             dir='ltr'
-            className={`w-full px-5 md:px-8 lg:px-12 py-16 md:py-20 lg:py-24 border-t border-b border-black ${isDark
+            className={`w-full px-5 md:px-8 lg:px-12 py-16 md:py-20 lg:py-24 border-t border-b border-[#2A2A2A] ${isDark
                     ? 'bg-[#111111]'
                     : 'bg-[#F5F5F5]'
                 }`}
